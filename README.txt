@@ -1,7 +1,9 @@
 
 
 Initial page to add to a order- creates a order and keeps adding to same order till order complete is added
-![](Images/filename%20Image1.png)
+
+![image](https://raw.githubusercontent.com/codevigilante69/QuickRide_project/master/Images/Image1.png)
+
 
 Can fill any value for a single product and it will be added
 As of now user id is always send as 1 to backend but it can be configured later if wanted
