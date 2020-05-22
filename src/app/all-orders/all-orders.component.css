@@ -1,0 +1,33 @@
+table {
+    width: 100%;
+  }
+  
+  button {
+    margin: 16px 8px;
+  }
+  
+  .thumbnail{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    object-fit: cover;
+  }
+  .btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .mat-row {
+    height: auto;
+  }
+  
+  .mat-cell {
+    padding: 8px 8px 8px 0;
+  }
+  .container{
+    box-shadow: 1px 0px 7px 3px #a8a8a8;
+    margin-top: 3%;
+    padding: 1%;
+    background: #fff;
+    }

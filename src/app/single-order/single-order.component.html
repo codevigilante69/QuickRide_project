@@ -1,0 +1,55 @@
+
+
+
+<mat-form-field class="example-full-width">
+    <mat-label>Order Id</mat-label>
+    <input matInput name="name2" placeholder="please Fill Order Id" [(ngModel)]="orderId">
+</mat-form-field>
+
+<button mat-button (click)="getOrderDetail()">
+    Search
+</button>
+
+
+
+<div class="form-group">
+    <label for="query"></label>
+    <input #query (keyup)="applyFilter(query.value)" type="text" class="form-control" placeholder="Search" style="width: fit-content; display: inline-block;">
+</div>
+    
+    
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="productId">
+        <th mat-header-cell *matHeaderCellDef> productId </th>
+        <td mat-cell *matCellDef="let element"> {{element.productId}} </td>
+    </ng-container>
+
+    <!-- image Column -->
+    <ng-container matColumnDef="imgUrl">
+    <th mat-header-cell *matHeaderCellDef> </th>
+    <td mat-cell *matCellDef="let element"> 
+            <img [src]="element.imgUrl" alt="not available" class="thumbnail">
+    </td>
+    </ng-container>
+
+    <!-- title Column -->
+    <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef> Price</th>
+    <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="qtyAdded">
+    <th mat-header-cell *matHeaderCellDef> QTY </th>
+    <td mat-cell *matCellDef="let element"> {{element.qtyAdded}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
